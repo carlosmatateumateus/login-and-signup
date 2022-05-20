@@ -1,0 +1,195 @@
+@charset "UTF-8";
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+:root{
+    --backgroundColor_left: rgb(23, 148, 142);
+    --backgroundColor_right: rgb(11, 28, 44);
+}
+body{
+    height: 90vh;
+    width: 100vw;
+
+    display: flex;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: white;
+    background: var(--backgroundColor_right);
+}
+
+body > div#left{
+    height: 100vh;
+    width: 50vw;
+
+    background: var(--backgroundColor_left);
+    color: white;
+    font-weight: bold;
+
+}
+
+body > div#right{
+    height: 100vh;
+    width: 50vw;
+
+    background: var(--backgroundColor_right);
+}
+
+/*Div principal left*/
+
+body > div#left{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    text-align: center;
+}
+body > div#left > img#launch{
+    height: 60%;
+    width: 60%;
+}
+
+body > div#left >  p#word{
+    font-size: 1.8em;
+}
+
+/*Div principal right*/
+
+
+/********Buttons********/
+
+body > div#right > div#buttons{
+    margin-top: 2%;
+    margin-right: 3%;
+    width: 97%;
+    height: 5%;
+    display: flex;
+    justify-content: right;
+}
+
+body > div#right > div#buttons > a > button#first{
+    height: 30px;
+    width: 90px;
+
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    border: none;
+    background: rgba(0, 0, 0, 0.200);
+    color: rgb(180, 179, 179);
+}
+
+body > div#right > div#buttons > a > button#second{
+    height: 30px;
+    width: 90px;
+
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    border: none;
+    background: var(--backgroundColor_left);
+    color: white;
+    box-shadow: 0px 0px 10px black;
+}
+
+body > div#right > div#buttons > a > button:hover{
+    filter: brightness(40%);
+    cursor: pointer;
+
+    transition: 1.3s;
+}
+
+/*Another part*/
+
+body > div#right > div#another{
+    height: 93%;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+body > div#right > div#another > div#actions > button#login{
+    width: 130px;
+    height: 32px;
+    border-radius: 20px;
+    border: none;
+    color: white;
+    background: var(--backgroundColor_left);
+    box-shadow: 0px 0px 15px black;
+}
+
+body > div#right > div#another > div#actions > button#login:hover{
+    transition: 1s;
+    filter: brightness(40%);
+    cursor: pointer;
+}
+
+body > div#right > div#another > div#actions > a{
+    color: rgb(180, 179, 179);
+    text-decoration: none;
+}
+
+body > div#right > div#another > div#actions > a:hover{
+    text-decoration: underline;
+}
+
+body > div#right > div#another > label{
+    width: 70%;
+    font-size: 1em;
+}
+
+body > div#right > div#another > input{
+    width: 70%;
+    height: 40px;
+    outline: none;
+    background: rgba(0, 0, 0, 0);
+    border: none;
+    border-bottom: 1px solid rgb(105, 98, 98);
+    color: rgb(180, 180, 180);
+}
+
+body > div#right > div#another > div#look{
+    width: 70%;
+}
+
+body > div#right > div#another > label#pass{
+    margin-top: 25px;
+}
+
+body > div#right > div#another > input#password{
+    margin-bottom: 25px;
+}
+
+body > div#right > div#another > div#look{
+    margin-bottom: 20px;
+}
+
+body > div#right > div#another > input#password-confirm{
+    margin-bottom: 25px;
+}
+
+
+
+@media only screen and (max-width: 1000px){
+    body{
+        flex-direction: column;
+        width: 100vw;
+    }
+    body > div#left{
+        width: 100%;
+        background: var(--backgroundColor_left);
+    }
+    body > div#right{
+        width: 100%;
+    }
+    #actions{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
